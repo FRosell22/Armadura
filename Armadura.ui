@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Armadura</class>
+ <widget class="QMainWindow" name="Armadura">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1379</width>
+    <height>990</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>45</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QFrame" name="frame_3">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>200</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>200</width>
+         <height>45</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>300</width>
+         <height>45</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(216, 216, 216);</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QComboBox" name="cb_paginas">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>200</width>
+          <height>45</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>45</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>300</width>
+          <height>45</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>ArialBlack</family>
+          <pointsize>10</pointsize>
+          <weight>10</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QComboBox {
+
+	/* Color de fondo */
+	background-color: rgb(255, 255, 255);
+
+	/* Borde */
+	border-radius: 5px;
+	border: 2px solid rgb(0, 0, 255);
+
+	/* Letra */	
+	font: 87 10pt &quot;ArialBlack&quot;;
+	color: rgb(0, 0, 0);
+}
+
+QComboBox:hover{
+	border: 2px solid rgb(110, 208, 155)
+
+}
+
+
+</string>
+        </property>
+        <property name="editable">
+         <bool>false</bool>
+        </property>
+        <property name="currentText">
+         <string>INTRODUCIR DATOS</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>INTRODUCIR DATOS</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>MATRÍZ DE RÍGIDEZ</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>RESULTADOS Y DIAGRAMAS</string>
+         </property>
+        </item>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame_2">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(85, 170, 255);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QStackedWidget" name="stackedWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>1371</width>
+         <height>891</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="pag_1">
+        <widget class="QGroupBox" name="groupBox">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>1351</width>
+           <height>881</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QGroupBox{
+
+/*Borde*/
+
+	border: 2px solid rgb(255, 255, 255);
+	border-radius: 10px;
+
+/*Letra*/
+
+	font: 87 10pt &quot;Arial Black&quot;;
+	color: rgb(255, 255, 255)
+}</string>
+         </property>
+         <property name="title">
+          <string>DATOS</string>
+         </property>
+         <widget class="QTableWidget" name="tbl_Elem">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>50</y>
+            <width>541</width>
+            <height>192</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QTableWidget{
+
+	background-color: rgb(255, 255, 255);
+
+	font: 87 10pt &quot;Arial&quot;;
+}
+
+QHeaderView{
+	background-color: rgb(255, 255, 255);
+	font: 87 10pt &quot;Arial Black&quot;;
+}</string>
+          </property>
+          <property name="rowCount">
+           <number>0</number>
+          </property>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>Elemento</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Área</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Mod. Elast.</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Nodo inicial</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Nodo final</string>
+           </property>
+          </column>
+         </widget>
+         <widget class="QSpinBox" name="sp_numElem">
+          <property name="geometry">
+           <rect>
+            <x>200</x>
+            <y>10</y>
+            <width>81</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QSpinBox {
+
+	/* Color de fondo */
+	background-color: rgb(255, 255, 255);
+
+	/* Borde */
+	border-radius: 5px;
+	border: 2px solid rgb(0, 0, 255);
+
+	/* Letra */	
+	font: 87 10pt &quot;ArialBlack&quot;;
+	color: rgb(0, 0, 0);
+}
+
+QSpinBox:hover{
+	border: 2px solid rgb(110, 208, 155)
+
+}
+
+</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>20</y>
+            <width>171</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial Black</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel{
+
+	background-color: None;
+	font: 87 10pt &quot;Arial Black&quot;;
+	color: rgb (255, 255, 255);
+}</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Número de elementos:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QTableWidget" name="tbl_Nods">
+          <property name="geometry">
+           <rect>
+            <x>570</x>
+            <y>50</y>
+            <width>441</width>
+            <height>192</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QTableWidget{
+
+	background-color: rgb(255, 255, 255);
+
+	font: 87 10pt &quot;Arial&quot;;
+}
+
+QHeaderView{
+	background-color: rgb(255, 255, 255);
+	font: 87 10pt &quot;Arial Black&quot;;
+}</string>
+          </property>
+          <property name="rowCount">
+           <number>0</number>
+          </property>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>Nodo</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Coord. X</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Coord. Y</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Tipo</string>
+           </property>
+          </column>
+         </widget>
+         <widget class="QSpinBox" name="sp_numNodo">
+          <property name="geometry">
+           <rect>
+            <x>720</x>
+            <y>10</y>
+            <width>81</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QSpinBox {
+
+	/* Color de fondo */
+	background-color: rgb(255, 255, 255);
+
+	/* Borde */
+	border-radius: 5px;
+	border: 2px solid rgb(0, 0, 255);
+
+	/* Letra */	
+	font: 87 10pt &quot;ArialBlack&quot;;
+	color: rgb(0, 0, 0);
+}
+
+QSpinBox:hover{
+	border: 2px solid rgb(110, 208, 155)
+
+}
+
+</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_2">
+          <property name="geometry">
+           <rect>
+            <x>570</x>
+            <y>20</y>
+            <width>141</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial Black</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel{
+
+	background-color: None;
+	font: 87 10pt &quot;Arial Black&quot;;
+	color: rgb (255, 255, 255);
+}</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Número de nodos:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_3">
+          <property name="geometry">
+           <rect>
+            <x>1020</x>
+            <y>20</y>
+            <width>141</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial Black</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel{
+
+	background-color: None;
+	font: 87 10pt &quot;Arial Black&quot;;
+	color: rgb (255, 255, 255);
+}</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Número de fuerzas:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QTableWidget" name="tbl_Frza">
+          <property name="geometry">
+           <rect>
+            <x>1020</x>
+            <y>50</y>
+            <width>311</width>
+            <height>192</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QTableWidget{
+
+	background-color: rgb(255, 255, 255);
+
+	font: 87 10pt &quot;Arial&quot;;
+}
+
+QHeaderView{
+	background-color: rgb(255, 255, 255);
+	font: 87 10pt &quot;Arial Black&quot;;
+}</string>
+          </property>
+          <property name="rowCount">
+           <number>0</number>
+          </property>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>Fuerza</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Nodo</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Dirección</string>
+           </property>
+          </column>
+         </widget>
+         <widget class="QSpinBox" name="sp_Fuerzas">
+          <property name="geometry">
+           <rect>
+            <x>1170</x>
+            <y>10</y>
+            <width>81</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QSpinBox {
+
+	/* Color de fondo */
+	background-color: rgb(255, 255, 255);
+
+	/* Borde */
+	border-radius: 5px;
+	border: 2px solid rgb(0, 0, 255);
+
+	/* Letra */	
+	font: 87 10pt &quot;ArialBlack&quot;;
+	color: rgb(0, 0, 0);
+}
+
+QSpinBox:hover{
+	border: 2px solid rgb(110, 208, 155)
+
+}
+
+</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_4">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>260</y>
+            <width>211</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial Black</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel{
+
+	background-color: None;
+	font: 87 10pt &quot;Arial Black&quot;;
+	color: rgb (255, 255, 255);
+}</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Número de&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QTableWidget" name="tbl_Desp">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>310</y>
+            <width>311</width>
+            <height>192</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QTableWidget{
+
+	background-color: rgb(255, 255, 255);
+
+	font: 87 10pt &quot;Arial&quot;;
+}
+
+QHeaderView{
+	background-color: rgb(255, 255, 255);
+	font: 87 10pt &quot;Arial Black&quot;;
+}</string>
+          </property>
+          <property name="rowCount">
+           <number>0</number>
+          </property>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>Desp.</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Nodo</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Dirección</string>
+           </property>
+          </column>
+         </widget>
+         <widget class="QSpinBox" name="sp_Desp">
+          <property name="geometry">
+           <rect>
+            <x>160</x>
+            <y>270</y>
+            <width>81</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QSpinBox {
+
+	/* Color de fondo */
+	background-color: rgb(255, 255, 255);
+
+	/* Borde */
+	border-radius: 5px;
+	border: 2px solid rgb(0, 0, 255);
+
+	/* Letra */	
+	font: 87 10pt &quot;ArialBlack&quot;;
+	color: rgb(0, 0, 0);
+}
+
+QSpinBox:hover{
+	border: 2px solid rgb(110, 208, 155)
+
+}
+
+</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_5">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>280</y>
+            <width>131</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial Black</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel{
+
+	background-color: None;
+	font: 87 10pt &quot;Arial Black&quot;;
+	color: rgb (255, 255, 255);
+}</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;desplazamientos:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QWidget" name="widget" native="true">
+          <property name="geometry">
+           <rect>
+            <x>360</x>
+            <y>310</y>
+            <width>971</width>
+            <height>561</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);
+border-radius: 10px;</string>
+          </property>
+         </widget>
+         <widget class="QWidget" name="widget_2" native="true">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>580</y>
+            <width>311</width>
+            <height>151</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);
+border-radius: 10px;</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_6">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>550</y>
+            <width>261</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial Black</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel{
+
+	background-color: None;
+	font: 87 10pt &quot;Arial Black&quot;;
+	color: rgb (255, 255, 255);
+}</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Tipo de restricción en los nodos&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>750</y>
+            <width>141</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+
+	background-color: rgb(193, 193, 193);
+	border: 2px solid rgb(12,12,12);
+	color: rgb(12, 12, 12);
+	border-radius: 8px;
+	
+	font: 10pt &quot;Arial&quot;;
+
+}
+QPushButton:hover{
+
+	background-color: rgb(142, 168, 195);
+	border: 2px solid rgb(203,247,237);
+
+}
+QPushButton:pressed{
+
+	background-color: rgb(203,247,237);
+	border: 2px solid rgb(246,253,157);
+}</string>
+          </property>
+          <property name="text">
+           <string>Visualizar armadura</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="pag_2">
+        <widget class="QGroupBox" name="groupBox_2">
+         <property name="geometry">
+          <rect>
+           <x>330</x>
+           <y>230</y>
+           <width>120</width>
+           <height>80</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>GroupBox</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="pag_3">
+        <widget class="QGroupBox" name="groupBox_3">
+         <property name="geometry">
+          <rect>
+           <x>210</x>
+           <y>300</y>
+           <width>120</width>
+           <height>80</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>GroupBox</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1379</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
